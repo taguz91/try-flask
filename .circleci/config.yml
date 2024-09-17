@@ -3,14 +3,10 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/python:3.12.1
+      - image: cimg/python:3.11.10
     steps:
       - checkout
       - run: python --version
-      - run:
-          name: Actualizar pip
-          command: |
-            pip install --upgrade pip
       - run:
           name: Instalar dependencias
           command: |
